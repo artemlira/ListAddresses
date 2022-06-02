@@ -1,0 +1,36 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #ece8e8;
+}
+
+.wrapper {
+   width: 90vw;
+   max-width: 1120px;
+   margin: 50px auto;
+   padding: 20px;
+   border-radius: 10px;
+   background-color: rgb(183, 212, 170);
+   box-shadow: 2px 2px 20px;
+}
+
+form {
+   width: 40%;
+   height: 20vh;
+   margin: 0 auto;
+}
+
+select {
+   width: 100%;
+   margin-top: 20px;
+}
+
+@media (max-width:968px) {
+   form {
+      width: 90%;
+   }
+}
