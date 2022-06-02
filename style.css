@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 body {
@@ -16,6 +17,13 @@ body {
    border-radius: 10px;
    background-color: rgb(183, 212, 170);
    box-shadow: 2px 2px 20px;
+   position: relative;
+}
+
+img {
+   position: absolute;
+   width: 100px;
+   height: 100px;
 }
 
 form {
@@ -27,10 +35,32 @@ form {
 select {
    width: 100%;
    margin-top: 20px;
+   font-size: 1.2rem;
+   font-weight: 500;
+   text-align: center;
+}
+
+.block {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.adress {
+   border: 1px solid #000;
+   overflow: hidden;
+   padding: 10px;
+   margin-top: 10px;
+   background-color: rgb(248, 246, 246);
 }
 
 @media (max-width:968px) {
    form {
       width: 90%;
+   }
+
+   img {
+      display: none;
    }
 }
