@@ -18,6 +18,9 @@ class ListAddresses {
       this.select.addEventListener('change', (even) => {
          let target = even.target;
          let adresses = [];
+         let city;
+         let phone;
+         let address;
          this.data.forEach((item) => {
             if (item.state == target.value) {
                adresses.push(item);
@@ -26,7 +29,15 @@ class ListAddresses {
          this.clearSelect(this.wrapper.querySelector('.block'));
          adresses.forEach(() => this.wrapper.querySelector('.block').append(this.adress.cloneNode()));
          adresses.forEach((item, index) => {
-            this.wrapper.querySelectorAll('.adress')[index].innerHTML = JSON.stringify(item).replace(/[^a-zа-яё0-9,.@:;()-]/gi, ' ');
+            city = document.createElement('p');
+            phone = document.createElement('p');
+            address = document.createElement('p');
+            city.textContent = 'город: ' + item.city;
+            phone.textContent = '№ тел.: ' + item.phone;
+            address.textContent = 'адресс: ' + item.address;
+            this.wrapper.querySelectorAll('.adress')[index].append(city);
+            this.wrapper.querySelectorAll('.adress')[index].append(phone);
+            this.wrapper.querySelectorAll('.adress')[index].append(address);
          });
       });
    }
